@@ -3,6 +3,7 @@ package com.ccc.khtdemo
 import android.app.Application
 import android.content.Context
 
+
 class MyApplication : Application() {
     companion object {
         lateinit var instance: MyApplication
@@ -13,6 +14,5 @@ class MyApplication : Application() {
         super.onCreate()
         instance = this
         appContext = applicationContext
-
-    }
+            }
 }

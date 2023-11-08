@@ -13,6 +13,6 @@ class MainActivity : ComponentActivity() {
         val imageView = findViewById<ImageView>(R.id.imageview)
 
 
-        startActivity(Intent(this, KHT2Activity::class.java))
+        startActivity(Intent(this, FaceActivity::class.java))
     }
 }

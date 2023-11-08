@@ -88,7 +88,7 @@ class KHTActivity : ComponentActivity() {
         }
     }
 
-    val cameraInput = CameraInput()
+//    val cameraInput = CameraInput(capture)
     var dfa: DFAController? = null
 
     private fun startDfaRun() {
@@ -97,7 +97,7 @@ class KHTActivity : ComponentActivity() {
         val poseFeatureInput = PoseFeatureInput()
         val frameIndexInput = FrameIndexInput()
         val inputMap = mutableMapOf(
-            "CameraInput" to cameraInput,
+//            "CameraInput" to cameraInput,
             "RawPoseFeatureInput" to rawPoseFeatureInput,
             "PoseFeatureInput" to poseFeatureInput,
             "FrameIndexInput" to frameIndexInput,
@@ -178,7 +178,7 @@ class KHTActivity : ComponentActivity() {
                             .also {
                                 it.setAnalyzer(imageExecutor) {
 //                                    Log.d("ccccccc", "imageAnalyzer imageProxy")
-                                    cameraInput.imageProxy = it
+//                                    cameraInput.imageProxy = it
                                 }
                             }
                     cameraProvider.unbindAll()

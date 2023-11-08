@@ -87,14 +87,16 @@ class DFAController(
     fun run(): Boolean {
         run = true
         while (!step() && run) {
+//        while (!step()) {
             Log.d("ccccccc", "run")
-            Thread.sleep(50)
+//            Thread.sleep(50)
             continue
         }
+//        throw FreshError("结束")
         return run
     }
 
-    fun step(): Boolean {
+    private fun step(): Boolean {
         Log.d("ccccccc", "controller step start")
         //刷新所有输入
         shortTermParameters = ShortTermParameters()
@@ -124,7 +126,7 @@ class DFAController(
                     inputMap
                 )
             } catch (e: Exception) {
-                e.printStackTrace()
+                throw e
             }
         }
     }
@@ -148,7 +150,10 @@ class DFAController(
                 } catch (e: Exception) {
                     e.printStackTrace()
                     result = false
-                    Log.e("ccccccc", "[Error] check {${checkerOne.optString(0)}}, error: {${e.message}}")
+                    Log.e(
+                        "ccccccc",
+                        "[Error] check {${checkerOne.optString(0)}}, error: {${e.message}}"
+                    )
                 }
                 Log.d("ccccccc", "check:${checkerOne.optString(0)},result:$result")
                 okOrNot = okOrNot and result
