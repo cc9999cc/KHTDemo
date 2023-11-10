@@ -28,6 +28,8 @@ import com.ccc.khtdemo.base.TimeChecker
 import com.ccc.khtdemo.base.UpdateLastFrameEnterCount
 import org.json.JSONArray
 import org.json.JSONException
+import org.opencv.videoio.VideoCapture
+import org.opencv.videoio.Videoio
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -92,7 +94,6 @@ class KHTActivity : ComponentActivity() {
     var dfa: DFAController? = null
 
     private fun startDfaRun() {
-
         val rawPoseFeatureInput = RawPoseFeatureInput()
         val poseFeatureInput = PoseFeatureInput()
         val frameIndexInput = FrameIndexInput()

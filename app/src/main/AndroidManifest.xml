@@ -51,6 +51,9 @@
         <activity
             android:name=".FaceActivity"
             android:exported="false" />
+        <activity
+            android:name=".OpencvCameraActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

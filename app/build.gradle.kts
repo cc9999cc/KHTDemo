@@ -42,11 +42,11 @@ android {
     }
 }
 
-chaquopy{
-    defaultConfig{
-        pip{
+chaquopy {
+    defaultConfig {
+        pip {
             install("numpy")
-//            install("opencv-python")
+            install("opencv-python")
         }
     }
 }
@@ -81,8 +81,10 @@ dependencies {
 //    implementation("com.google.protobuf:protobuf-java:3.11.4")
 
     //onnxruntime
-    implementation ("com.microsoft.onnxruntime:onnxruntime-android:latest.release")
-    implementation("com.microsoft.onnxruntime:onnxruntime-extensions-android:latest.release")
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:latest.release")
+//    implementation("com.microsoft.onnxruntime:onnxruntime-extensions-android:latest.release")
+//    implementation("com.microsoft.onnxruntime:onnxruntime-training-android:latest.release")
+//    implementation("com.microsoft.onnxruntime:onnxruntime-mobile:latest.release")
 
     //opencv
 //    implementation("org.openpnp:opencv:4.5.1-2")

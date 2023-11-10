@@ -23,6 +23,12 @@
         android:onClick="playVideo"
         android:text="播放视频" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:text="人脸检测"
+        android:onClick="detectFace"
+        android:layout_height="wrap_content"/>
+
     <VideoView
         android:id="@+id/video_view"
         android:layout_width="200dp"

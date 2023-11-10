@@ -63,8 +63,10 @@ class CameraInput(val capture: VideoCapture) :
         inputMap: Map<String, BaseInput>
     ) {
         Log.d("ccccccc", "CameraInput start")
+//        val frame = Mat()
+//        capture.read(frame)
         val frame = Mat()
-        capture.read(frame)
+        capture.retrieve(frame)
         if (frame.empty()) {
             throw FreshError("视频结束")
         }
